@@ -1,0 +1,46 @@
+baseurl = ""
+languageCode = "en-us"
+title = "Hugo Boilerplate"
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[author]
+  name = "Nathan Workman"
+  homepage = ""
+
+# [permalinks]
+#   blog = "/:filename/"
+
+[menu]
+  [[menu.main]]
+    name = "Link"
+    pre = "link"
+    url = "/link"
+    weight = 1
+  [[menu.main]]
+    name = "Link 2"
+    pre = "link2"
+    url = "/link2"
+    weight = 2
+  [[menu.main]]
+    name = "Link 3"
+    pre = "link3"
+    url = "/link3"
+    weight = 3
+  [[menu.main]]
+    name = "Link 4"
+    pre = "link4"
+    url = "/link4"
+    weight = 4
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 1.0
+
+[build]
+  writeStats = false
+
+# [module]
+#   [[module.mounts]]
+#     source = "node_modules"
+#     target = "assets/js/bootstrap.bundle.min.js"
