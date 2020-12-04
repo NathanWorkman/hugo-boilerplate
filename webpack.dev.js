@@ -14,10 +14,11 @@ module.exports = merge(common, {
   },
   devServer: {
     port: process.env.PORT || 3000,
-    contentBase: path.join(__dirname, './public'),
-    // contentBase: path.join(process.cwd(), './public'),
-    // watchContentBase: true,
-    // quiet: false,
+    // TODO: this one is for webpack server v4 when its out of beta
+    // static: path.join(__dirname, './public'),
+    contentBase: path.join(process.cwd(), './public'),
+    watchContentBase: true,
+    quiet: false,
     open: true,
     historyApiFallback: {
       rewrites: [{from: /./, to: '404.html'}]

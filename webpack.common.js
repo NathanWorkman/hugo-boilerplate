@@ -41,7 +41,9 @@ module.exports = {
     new AssetsPlugin({
       filename: 'webpack.json',
       path: path.join(process.cwd(), 'data'),
-      prettyPrint: true
+      publicPath: '/data/',
+      prettyPrint: true,
+      removeFullPathAutoPrefix: true
     }),
     new CopyWebpackPlugin({
       patterns: [

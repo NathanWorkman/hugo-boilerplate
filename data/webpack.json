@@ -1,11 +1,12 @@
 {
   "main": {
-    "js": "auto/main.js"
+    "css": "main.css",
+    "js": "main.js"
   },
   "": {
     "gitkeep": [
-      "auto/fonts/.gitkeep",
-      "auto/videos/.gitkeep"
+      "fonts/.gitkeep",
+      "videos/.gitkeep"
     ]
   }
 }
