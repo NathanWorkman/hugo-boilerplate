@@ -8,27 +8,21 @@ module.exports = {
   entry: {
     main: path.join(__dirname, 'src', 'index.js')
   },
-
   output: {
     path: path.join(__dirname, 'public')
   },
-
   module: {
     rules: [
       {
         test: /\.((png)|(eot)|(woff)|(woff2)|(ttf)|(svg)|(gif))(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file-loader?name=/[hash].[ext]'
+        use: 'file-loader?name=/[chunkhash].[ext]'
       },
-
-      {test: /\.json$/, loader: 'json-loader'},
-
+      {test: /\.json$/, use: 'json-loader'},
       {
-        loader: 'babel-loader',
+        use: 'babel-loader',
         test: /\.js?$/,
-        exclude: /node_modules/,
-        query: {cacheDirectory: true}
+        exclude: /node_modules/
       },
-
       {
         test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules/,
@@ -42,14 +36,13 @@ module.exports = {
       }
     ]
   },
-
   plugins: [
+    new webpack.ProgressPlugin(),
     new AssetsPlugin({
       filename: 'webpack.json',
       path: path.join(process.cwd(), 'data'),
       prettyPrint: true
     }),
-
     new CopyWebpackPlugin({
       patterns: [
         {

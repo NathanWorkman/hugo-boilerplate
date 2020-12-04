@@ -1,13 +1,11 @@
 {
   "main": {
-    "css": "main.css",
-    "js": "main.js"
+    "js": "auto/main.js"
   },
   "": {
     "gitkeep": [
-      "fonts/.gitkeep",
-      "videos/.gitkeep"
-    ],
-    "json": "c14d5d37a9aa5d414201.hot-update.json"
+      "auto/fonts/.gitkeep",
+      "auto/videos/.gitkeep"
+    ]
   }
 }
